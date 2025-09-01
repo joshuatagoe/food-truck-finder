@@ -1,0 +1,33 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    image: foodtrucks-backend
+    container_name: foodtrucks-backend
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+    ports:
+      - "3000:3000"
+    # Mount db so your data persists/rebuilds are easy
+    volumes:
+      - ./backend/data:/app/data:rw
+      # If you keep data elsewhere, adjust the path above
+    healthcheck:
+      test: [ "CMD", "node", "-e", "require('http').get('http://localhost:3000', ()=>process.exit(0)).on('error',()=>process.exit(1))" ]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        # Make the frontend call the backend service name in docker network
+        VITE_API_URL: http://localhost:3000
+    image: foodtrucks-frontend
+    container_name: foodtrucks-frontend
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"

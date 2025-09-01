@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log
+dist
+coverage
+*.map
+*.log
+.vscode
+.DS_Store

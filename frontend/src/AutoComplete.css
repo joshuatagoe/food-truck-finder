@@ -1,0 +1,124 @@
+form[role="search"] {
+  display: flex;
+  flex-wrap: wrap;
+  /* allows wrapping on small screens */
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  /* spacing between inputs */
+  margin: 2rem auto;
+  max-width: 1000px;
+  /* keeps it from stretching too wide */
+}
+
+form[role="search"] label {
+  font-size: 0.9rem;
+  color: #555;
+  margin-right: 0.4rem;
+}
+
+.status,
+.searchBar,
+input[type="number"],
+button {
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s ease;
+  flex: 1;
+  /* makes them scale evenly */
+  min-width: 180px;
+  /* keeps them usable on small screens */
+}
+
+.status:focus,
+.searchBar:focus,
+input[type="number"]:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.check {
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+}
+
+/* Overlay results below search bar */
+.results-overlay {
+  position: absolute;
+  top: 100%;
+  /* right below the search input */
+  left: 0;
+  right: 0;
+  max-height: 300px;
+  /* enough vertical scroll space */
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  /* stays above other elements */
+}
+
+
+/* Container for all options */
+.options-list {
+  display: flex;
+  flex-direction: column;
+  /* stack cards vertically */
+  gap: 1rem;
+  /* space between cards */
+  margin-top: 1rem;
+}
+
+.option-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin: 0.5rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.option-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Title: vendor/applicant */
+.option-title {
+  font-size: 1.25rem;
+  /* larger */
+  font-weight: 600;
+  /* semi-bold */
+  color: #222;
+  /* darker text */
+  margin-bottom: 0.25rem;
+  /* space before location */
+}
+
+/* Location: subtext under title */
+.option-location {
+  font-size: 0.9rem;
+  /* smaller than title */
+  color: #666;
+  /* muted gray */
+  margin-bottom: 0.5rem;
+  /* space before description */
+}
+
+/* Description: food items */
+.option-description {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.highlight {
+  background-color: rgba(0, 0, 0, 0.15);
+}

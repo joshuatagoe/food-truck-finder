@@ -1,0 +1,17 @@
+.loading-spinner {
+  width: 28px;
+  height: 28px;
+  border: 2px solid #e5e7eb;
+  /* light gray border */
+  border-top-color: #4b5563;
+  /* muted dark gray accent */
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

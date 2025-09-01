@@ -1,0 +1,41 @@
+export type SearchParams = {
+  applicantName: string;
+  streetName: string;
+  status: string;
+  limit: number;
+  latitude?: string;
+  longitude?: string;
+};
+
+export type FoodTruck = {
+  locationId: number;
+  applicant: string;
+  facilityType: string | null;
+  cnn: number | null;
+  locationDescription: string;
+  address: string;
+  blocklot: string | null;
+  block: string | null;
+  lot: string | null;
+  permit: string | null;
+  status: string | null;
+  foodItems: string | null;
+  x: number | null;
+  y: number | null;
+  latitude: number | null;
+  longitude: number | null;
+  schedule: string | null;
+  dayshours: string | null;
+  noiSent: string | null;
+  approved: string | null;
+  received: string | null;
+  priorPermit: number | null;
+  expirationDate: string | null;
+  location: string | null;
+  firePreventionDistricts: number | null;
+  policeDistricts: number | null;
+  supervisorDistricts: number | null;
+  zipCodes: number | null;
+  neighborhoodsOld: string | null;
+  [key: string]: string | number | null | undefined;
+};
