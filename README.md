@@ -4,18 +4,18 @@ SF Mobile Food Facilities
 Description of the Problem and Solution
 ---------------------------------------
 
-The task was to build an application around the San Francisco **Mobile Food Facility Permit** dataset with these requirements:
+The goal was to build an application around the San Francisco **Mobile Food Facility Permit** dataset with these requirements:
 
-As a **frontend-leaning engineer**, my task was to:
+On the **frontend**:
 
-*   Build a UI using frontend framework like React, where users can:
+*   A UI using frontend framework like React, where users can:
     
     *   Search by applicant name (with optional Status filter)
         
     *   Search by street name (support partial matches)
         
 
-**Backend-focused features (bonus):**
+On the **Backend**:
 
 *   API that supports applicant search, street search, and nearest-5 queries by latitude/longitude (default Status = APPROVED, overrideable)
     
@@ -26,7 +26,7 @@ As a **frontend-leaning engineer**, my task was to:
 *   Docker setup
     
 
-**My solution delivers both backend and frontend versions:**
+**My solution:**
 
 *   **Backend (Node.js + Express + TypeScript + SQLite)**
     
